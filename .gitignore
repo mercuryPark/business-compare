@@ -1,0 +1,12 @@
+node_modules
+dist
+coverage
+playwright-report
+test-results
+.DS_Store
+.mcp.json
+.claude/skills/lazyweb*
+
+tmp-*.png
+tmp/
+.superpowers/
