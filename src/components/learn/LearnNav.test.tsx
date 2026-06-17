@@ -14,8 +14,13 @@ describe('learn navigation components', () => {
 
   it('chapter nav links to prev and next', () => {
     render(<LearnChapterNav activeSlug="ch2-contract" />);
-    expect(screen.getByRole('link', { name: /마음가짐/ })).toHaveAttribute('href', '#learn/ch1-mindset-money');
-    expect(screen.getByRole('link', { name: /입지/ })).toHaveAttribute('href', '#learn/ch3-location-license');
+    expect(screen.getByRole('link', { name: /이전/ })).toHaveAttribute('href', '#learn/ch1-mindset-money');
+    expect(screen.getByRole('link', { name: /다음/ })).toHaveAttribute('href', '#learn/ch3-location-license');
+  });
+
+  it('chapter nav shows the reading position', () => {
+    render(<LearnChapterNav activeSlug="ch2-contract" />);
+    expect(screen.getByText('2 / 8')).toBeTruthy();
   });
 
   it('not-found shows the requested slug and recovery links', () => {

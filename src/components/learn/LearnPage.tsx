@@ -4,6 +4,7 @@ import { SENSITIVE_CATEGORIES } from '../../domain/learn/sourceGate';
 import { LearnSourcesProvider } from './primitives/sourceContext';
 import { SourceNote } from './primitives/SourceNote';
 import { LearnSidebar } from './LearnSidebar';
+import { LearnMobileToc } from './LearnMobileToc';
 import { LearnChapterNav } from './LearnChapterNav';
 import { LearnNotFound } from './LearnNotFound';
 
@@ -39,10 +40,13 @@ export function LearnPage({ route }: { route: Extract<LearnRoute, { view: 'learn
 
   return (
     <div className="grid gap-6 md:grid-cols-[16rem_1fr]">
-      <aside className="md:sticky md:top-4 md:self-start">
+      <aside className="hidden md:sticky md:top-4 md:block md:self-start">
         <LearnSidebar activeSlug={chapter.slug} />
       </aside>
       <article>
+        <div className="mb-4">
+          <LearnMobileToc activeSlug={chapter.slug} />
+        </div>
         {hasPendingSensitiveSource && (
           <div
             role="alert"
