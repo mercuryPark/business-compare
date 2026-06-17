@@ -8,6 +8,8 @@ import { HiddenCostList } from './HiddenCostList';
 import { CtaLink } from './CtaLink';
 import { SourceBackedTable } from './SourceBackedTable';
 import { CashflowCalendar } from './CashflowCalendar';
+import { MoneyScenario } from './MoneyScenario';
+import { CashflowWaterfall } from './CashflowWaterfall';
 
 const src: LearnSource = {
   id: 's', category: 'tax', sourceTitle: '국세청', sourceUrl: 'https://nts.go.kr',
@@ -48,6 +50,55 @@ describe('presentational primitives', () => {
     );
     expect(screen.getByText('5월')).toBeTruthy();
     expect(screen.getByText('종합소득세')).toBeTruthy();
+  });
+
+  it('MoneyScenario renders its fields and resolves its source', () => {
+    render(
+      <LearnSourcesProvider sources={[src]}>
+        <MoneyScenario
+          title="치킨집 손익"
+          monthlySales="3,000만 원"
+          lines={[{ label: '재료비', amount: '1,000만 원' }]}
+          takeHome="300만 원"
+          sourceId="s"
+        />
+      </LearnSourcesProvider>,
+    );
+    expect(screen.getByText('치킨집 손익')).toBeTruthy();
+    expect(screen.getByText('국세청')).toBeTruthy();
+  });
+
+  it('MoneyScenario throws on a missing sourceId', () => {
+    expect(() =>
+      render(
+        <LearnSourcesProvider sources={[]}>
+          <MoneyScenario title="x" monthlySales="0" lines={[]} takeHome="0" sourceId="missing" />
+        </LearnSourcesProvider>,
+      ),
+    ).toThrow(/Unknown learn sourceId/);
+  });
+
+  it('CashflowWaterfall renders its steps and resolves its source', () => {
+    render(
+      <LearnSourcesProvider sources={[src]}>
+        <CashflowWaterfall
+          steps={[{ label: '월매출', amount: '3,000만 원', kind: 'start' }]}
+          sourceId="s"
+        />
+      </LearnSourcesProvider>,
+    );
+    expect(screen.getByText('월매출')).toBeTruthy();
+    expect(screen.getByText('국세청')).toBeTruthy();
+  });
+
+  it('CashflowWaterfall throws on a missing sourceId', () => {
+    expect(() =>
+      render(
+        <LearnSourcesProvider sources={[]}>
+          <CashflowWaterfall steps={[]} sourceId="missing" />
+        </LearnSourcesProvider>,
+      ),
+    ).toThrow(/Unknown learn sourceId/);
   });
 
   it('source-bound primitive throws on a missing sourceId', () => {
