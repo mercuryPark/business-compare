@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
+import { CHAPTERS } from '../domain/learn/curriculum';
 import { Home } from './Home';
 
 describe('Home', () => {
@@ -23,7 +24,13 @@ describe('Home', () => {
 
   it('lists all eight curriculum chapters and a secondary compare CTA', () => {
     render(<Home />);
-    expect(screen.getByText('일상 운영의 기본기')).toBeTruthy();
+    expect(CHAPTERS).toHaveLength(8);
+    for (const chapter of CHAPTERS) {
+      expect(screen.getByRole('link', { name: chapter.title })).toHaveAttribute(
+        'href',
+        `#learn/${chapter.slug}`,
+      );
+    }
     expect(screen.getByRole('link', { name: /프랜차이즈 비용 비교/ })).toHaveAttribute('href', '#compare');
   });
 
