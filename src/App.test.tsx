@@ -1,9 +1,16 @@
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import App from './App';
 
 vi.setConfig({ testTimeout: 10000 });
+
+beforeEach(() => {
+  window.location.hash = '#compare';
+});
+afterEach(() => {
+  window.location.hash = '';
+});
 
 const forbiddenDefaultCopy = [
   '원문 검토 필요',

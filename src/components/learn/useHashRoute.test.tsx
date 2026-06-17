@@ -9,10 +9,10 @@ afterEach(() => { window.location.hash = ''; });
 describe('useHashRoute', () => {
   it('returns the compare view by default and updates on hashchange', () => {
     const { result } = renderHook(() => useHashRoute());
-    expect(result.current).toEqual({ view: 'compare' });
+    expect(result.current).toEqual({ view: 'home' });
 
     act(() => { window.location.hash = '#learn'; window.dispatchEvent(new HashChangeEvent('hashchange')); });
-    expect(result.current).toEqual({ view: 'learn', mode: 'landing' });
+    expect(result.current).toEqual({ view: 'home' });
 
     act(() => { window.location.hash = '#learn/ch2-contract'; window.dispatchEvent(new HashChangeEvent('hashchange')); });
     expect(result.current).toMatchObject({ view: 'learn', mode: 'chapter', chapterSlug: 'ch2-contract' });

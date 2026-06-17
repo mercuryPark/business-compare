@@ -5,14 +5,15 @@ import { parseLearnHash } from '../learn/route';
 const SLUGS = ['ch1-mindset-money', 'ch2-contract'];
 
 describe('parseLearnHash', () => {
-  it('treats empty / #compare as the compare view', () => {
-    expect(parseLearnHash('', SLUGS)).toEqual({ view: 'compare' });
-    expect(parseLearnHash('#', SLUGS)).toEqual({ view: 'compare' });
-    expect(parseLearnHash('#compare', SLUGS)).toEqual({ view: 'compare' });
+  it('routes empty / #home / bare #learn to home', () => {
+    expect(parseLearnHash('', SLUGS)).toEqual({ view: 'home' });
+    expect(parseLearnHash('#', SLUGS)).toEqual({ view: 'home' });
+    expect(parseLearnHash('#home', SLUGS)).toEqual({ view: 'home' });
+    expect(parseLearnHash('#learn', SLUGS)).toEqual({ view: 'home' });
   });
 
-  it('treats #learn as the landing hub, not the first chapter', () => {
-    expect(parseLearnHash('#learn', SLUGS)).toEqual({ view: 'learn', mode: 'landing' });
+  it('routes #compare to compare', () => {
+    expect(parseLearnHash('#compare', SLUGS)).toEqual({ view: 'compare' });
   });
 
   it('resolves a known chapter slug', () => {
@@ -23,11 +24,15 @@ describe('parseLearnHash', () => {
     });
   });
 
-  it('returns notFound for an unknown slug instead of redirecting', () => {
+  it('returns notFound for an unknown slug', () => {
     expect(parseLearnHash('#learn/nope', SLUGS)).toEqual({
       view: 'learn',
       mode: 'notFound',
       requestedSlug: 'nope',
     });
+  });
+
+  it('falls back to home for anything else', () => {
+    expect(parseLearnHash('#whatever', SLUGS)).toEqual({ view: 'home' });
   });
 });

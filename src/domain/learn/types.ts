@@ -34,7 +34,7 @@ export interface LearnChapter {
 }
 
 export type LearnRoute =
+  | { view: 'home' }
   | { view: 'compare' }
-  | { view: 'learn'; mode: 'landing' }
   | { view: 'learn'; mode: 'chapter'; chapterSlug: string }
   | { view: 'learn'; mode: 'notFound'; requestedSlug: string };

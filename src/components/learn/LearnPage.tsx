@@ -3,7 +3,6 @@ import { getChapter } from '../../domain/learn/curriculum';
 import { SENSITIVE_CATEGORIES } from '../../domain/learn/sourceGate';
 import { LearnSourcesProvider } from './primitives/sourceContext';
 import { SourceNote } from './primitives/SourceNote';
-import { LearnLanding } from './LearnLanding';
 import { LearnSidebar } from './LearnSidebar';
 import { LearnChapterNav } from './LearnChapterNav';
 import { LearnNotFound } from './LearnNotFound';
@@ -15,10 +14,6 @@ const PENDING_REVIEW_WARNING =
   '이 장에는 아직 전문가 검토를 거치지 않은 세무·노무·계약·임대차·인허가 항목이 포함되어 있습니다. 공식 자료와 전문가(세무사·노무사·가맹거래사 등) 확인 전에는 참고용으로만 보세요.';
 
 export function LearnPage({ route }: { route: Extract<LearnRoute, { view: 'learn' }> }) {
-  if (route.mode === 'landing') {
-    return <div className="mx-auto max-w-4xl">{<LearnLanding />}</div>;
-  }
-
   if (route.mode === 'notFound') {
     return (
       <div className="mx-auto max-w-4xl">
