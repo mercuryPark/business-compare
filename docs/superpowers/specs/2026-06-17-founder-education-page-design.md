@@ -286,10 +286,19 @@ deep URLs must be confirmed at authoring time and recorded in `lastCheckedAt`:
 
 ### 7.3 Disclaimer rendering
 
-- `LearnPage` shows a standing banner on every chapter:
+- `LearnPage` shows a standing neutral banner on every chapter:
   *"이 페이지는 일반적인 안내입니다. 구체적인 수치는 시점·지역·업종에 따라 다르며,
   정확한 내용은 공식 자료·세무사·전문가 확인이 필요합니다."*
+- **Per-chapter pending-review warning:** when a chapter has any source whose `category`
+  ∈ `SENSITIVE_CATEGORIES` and `reviewStatus !== 'expert-reviewed'`, `LearnPage` renders a
+  prominent `role="alert"` danger-style banner above the body warning that the chapter
+  contains 세무·노무·계약·임대차·인허가 items not yet expert-reviewed.
 - Every concrete number renders through a source-bound primitive with a `기준` note.
+- **Educational-example separation:** source-bound primitives accept an optional
+  `illustrative` prop. When set, an `IllustrativeBadge` ("교육용 예시 — 실제 통계 아님")
+  renders next to the `SourceNote`, so made-up teaching figures (CH4 cost tables, CH5
+  waterfall/scenarios, CH6 breakeven example) are visually distinct from factual/legal
+  claims (정보공개서 14일, VAT/소득세 mechanism, 최저임금/주휴수당).
 - The chapter footer makes the current `reviewStatus` visible to the reader.
 
 ### 7.4 Prelaunch gate — `check:learn-sources`
