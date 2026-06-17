@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 test('loads dashboard with core brand cards', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/#compare');
 
   await expect(page.getByRole('heading', { name: '내 조건에 맞는 프랜차이즈 찾기' })).toBeVisible();
   await expect(page.getByRole('heading', { name: '한눈에 보는 창업 지도' })).toBeVisible();
@@ -11,7 +11,7 @@ test('loads dashboard with core brand cards', async ({ page }) => {
 });
 
 test('selects two brands and shows the comparison table', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/#compare');
 
   await selectBrandForComparison(page, '메가커피');
   await selectBrandForComparison(page, '교촌치킨');
@@ -21,7 +21,7 @@ test('selects two brands and shows the comparison table', async ({ page }) => {
 });
 
 test('reveals advanced simulator controls progressively', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/#compare');
 
   const hansotReport = page.getByRole('region', { name: '한솥도시락 창업 판단 리포트' });
 
@@ -34,7 +34,7 @@ test('reveals advanced simulator controls progressively', async ({ page }) => {
 });
 
 test('analyzes a candidate location against break-even sales', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/#compare');
 
   const hansotReport = page.getByRole('region', { name: '한솥도시락 창업 판단 리포트' });
 
@@ -51,7 +51,7 @@ test('analyzes a candidate location against break-even sales', async ({ page }) 
 });
 
 test('does not analyze an unknown candidate area with fallback numbers', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/#compare');
 
   const hansotReport = page.getByRole('region', { name: '한솥도시락 창업 판단 리포트' });
 
@@ -63,7 +63,7 @@ test('does not analyze an unknown candidate area with fallback numbers', async (
 });
 
 test('opens a collapsed detail report from its dashboard card', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/#compare');
 
   const megaReport = page.getByRole('region', { name: '메가커피 창업 판단 리포트' });
   await expect(megaReport).toHaveCount(0);
