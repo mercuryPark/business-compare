@@ -1,4 +1,5 @@
 import { useLearnSource } from './sourceContext';
+import { IllustrativeBadge } from './IllustrativeBadge';
 import { SourceNote } from './SourceNote';
 
 export interface CostRow {
@@ -11,10 +12,12 @@ export function SourceBackedTable({
   caption,
   rows,
   sourceId,
+  illustrative,
 }: {
   caption: string;
   rows: CostRow[];
   sourceId: string;
+  illustrative?: boolean;
 }) {
   useLearnSource(sourceId);
   return (
@@ -31,7 +34,10 @@ export function SourceBackedTable({
           ))}
         </tbody>
       </table>
-      <figcaption className="mt-2"><SourceNote sourceId={sourceId} /></figcaption>
+      <figcaption className="mt-2 flex flex-wrap items-center gap-2">
+        {illustrative && <IllustrativeBadge />}
+        <SourceNote sourceId={sourceId} />
+      </figcaption>
     </figure>
   );
 }

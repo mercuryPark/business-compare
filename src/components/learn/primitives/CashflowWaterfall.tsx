@@ -1,4 +1,5 @@
 import { useLearnSource } from './sourceContext';
+import { IllustrativeBadge } from './IllustrativeBadge';
 import { SourceNote } from './SourceNote';
 
 export interface WaterfallStep {
@@ -7,7 +8,15 @@ export interface WaterfallStep {
   kind: 'start' | 'deduction' | 'result';
 }
 
-export function CashflowWaterfall({ steps, sourceId }: { steps: WaterfallStep[]; sourceId: string }) {
+export function CashflowWaterfall({
+  steps,
+  sourceId,
+  illustrative,
+}: {
+  steps: WaterfallStep[];
+  sourceId: string;
+  illustrative?: boolean;
+}) {
   useLearnSource(sourceId);
   return (
     <figure className="rounded-xl border border-line bg-surface p-4">
@@ -21,7 +30,10 @@ export function CashflowWaterfall({ steps, sourceId }: { steps: WaterfallStep[];
           </li>
         ))}
       </ul>
-      <figcaption className="mt-2"><SourceNote sourceId={sourceId} /></figcaption>
+      <figcaption className="mt-2 flex flex-wrap items-center gap-2">
+        {illustrative && <IllustrativeBadge />}
+        <SourceNote sourceId={sourceId} />
+      </figcaption>
     </figure>
   );
 }

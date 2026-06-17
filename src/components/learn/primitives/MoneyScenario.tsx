@@ -1,4 +1,5 @@
 import { useLearnSource } from './sourceContext';
+import { IllustrativeBadge } from './IllustrativeBadge';
 import { SourceNote } from './SourceNote';
 
 export interface ScenarioLine {
@@ -12,12 +13,14 @@ export function MoneyScenario({
   lines,
   takeHome,
   sourceId,
+  illustrative,
 }: {
   title: string;
   monthlySales: string;
   lines: ScenarioLine[];
   takeHome: string;
   sourceId: string;
+  illustrative?: boolean;
 }) {
   useLearnSource(sourceId);
   return (
@@ -36,7 +39,10 @@ export function MoneyScenario({
         <span className="text-ink">손에 남는 돈</span>
         <span className="text-leaf">{takeHome}</span>
       </div>
-      <div className="mt-2"><SourceNote sourceId={sourceId} /></div>
+      <div className="mt-2 flex flex-wrap items-center gap-2">
+        {illustrative && <IllustrativeBadge />}
+        <SourceNote sourceId={sourceId} />
+      </div>
     </section>
   );
 }

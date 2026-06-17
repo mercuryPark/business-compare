@@ -1,5 +1,6 @@
 import type { LearnRoute } from '../../domain/learn/types';
 import { getChapter } from '../../domain/learn/curriculum';
+import { SENSITIVE_CATEGORIES } from '../../domain/learn/sourceGate';
 import { LearnSourcesProvider } from './primitives/sourceContext';
 import { SourceNote } from './primitives/SourceNote';
 import { LearnLanding } from './LearnLanding';
@@ -9,6 +10,9 @@ import { LearnNotFound } from './LearnNotFound';
 
 const DISCLAIMER =
   '이 페이지는 일반적인 안내입니다. 구체적인 수치는 시점·지역·업종에 따라 다르며, 정확한 내용은 공식 자료·세무사·전문가 확인이 필요합니다.';
+
+const PENDING_REVIEW_WARNING =
+  '이 장에는 아직 전문가 검토를 거치지 않은 세무·노무·계약·임대차·인허가 항목이 포함되어 있습니다. 공식 자료와 전문가(세무사·노무사·가맹거래사 등) 확인 전에는 참고용으로만 보세요.';
 
 export function LearnPage({ route }: { route: Extract<LearnRoute, { view: 'learn' }> }) {
   if (route.mode === 'landing') {
@@ -34,12 +38,24 @@ export function LearnPage({ route }: { route: Extract<LearnRoute, { view: 'learn
 
   const Body = chapter.body;
 
+  const hasPendingSensitiveSource = chapter.sources.some(
+    (s) => SENSITIVE_CATEGORIES.has(s.category) && s.reviewStatus !== 'expert-reviewed',
+  );
+
   return (
     <div className="grid gap-6 md:grid-cols-[16rem_1fr]">
       <aside className="md:sticky md:top-4 md:self-start">
         <LearnSidebar activeSlug={chapter.slug} />
       </aside>
       <article>
+        {hasPendingSensitiveSource && (
+          <div
+            role="alert"
+            className="mb-4 rounded-lg border border-danger/40 bg-danger/10 p-3 text-sm font-semibold text-danger"
+          >
+            {PENDING_REVIEW_WARNING}
+          </div>
+        )}
         <div className="mb-4 rounded-lg border border-line bg-cream p-3 text-xs text-muted">{DISCLAIMER}</div>
         <LearnSourcesProvider sources={chapter.sources}>
           <Body />

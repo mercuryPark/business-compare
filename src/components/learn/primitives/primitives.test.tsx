@@ -101,6 +101,24 @@ describe('presentational primitives', () => {
     ).toThrow(/Unknown learn sourceId/);
   });
 
+  it('SourceBackedTable shows the illustrative badge when illustrative is true', () => {
+    render(
+      <LearnSourcesProvider sources={[src]}>
+        <SourceBackedTable caption="예시" rows={[{ label: '가맹비', value: '1,000만 원' }]} sourceId="s" illustrative />
+      </LearnSourcesProvider>,
+    );
+    expect(screen.getByText('교육용 예시 — 실제 통계 아님')).toBeTruthy();
+  });
+
+  it('SourceBackedTable hides the illustrative badge by default', () => {
+    render(
+      <LearnSourcesProvider sources={[src]}>
+        <SourceBackedTable caption="공식" rows={[{ label: '가맹비', value: '1,000만 원' }]} sourceId="s" />
+      </LearnSourcesProvider>,
+    );
+    expect(screen.queryByText('교육용 예시 — 실제 통계 아님')).toBeNull();
+  });
+
   it('source-bound primitive throws on a missing sourceId', () => {
     expect(() =>
       render(
