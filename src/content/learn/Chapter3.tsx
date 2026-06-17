@@ -4,7 +4,6 @@ import { CtaLink } from '../../components/learn/primitives/CtaLink';
 import { SourceBackedTable } from '../../components/learn/primitives/SourceBackedTable';
 import { TermExplainer } from '../../components/learn/primitives/TermExplainer';
 
-const LEASE_SOURCE_ID = 'ch3-lease-guide';
 const LICENSE_SOURCE_ID = 'ch3-restaurant-license';
 
 export function Chapter3() {
