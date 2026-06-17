@@ -29,7 +29,26 @@ const seedSource = (id: string): LearnChapter['sources'] => [
 ];
 
 export const CHAPTERS: LearnChapter[] = [
-  { id: 'ch1', slug: 'ch1-mindset-money', phase: 'prepare', order: 1, title: '마음가짐과 자금 준비', summary: '자금 준비와 창업하면 안 되는 조건', body: Chapter1, sources: seedSource('ch1-seed') },
+  {
+    id: 'ch1',
+    slug: 'ch1-mindset-money',
+    phase: 'prepare',
+    order: 1,
+    title: '마음가짐과 자금 준비',
+    summary: '자금 준비와 창업하면 안 되는 조건',
+    body: Chapter1,
+    sources: [
+      {
+        id: 'ch1-semas-startup',
+        category: 'general',
+        sourceTitle: '소상공인시장진흥공단 — 소상공인 창업 일반 안내',
+        sourceUrl: 'https://www.semas.or.kr/',
+        lastCheckedAt: '2026-06-17',
+        reviewStatus: 'draft',
+        reviewer: null,
+      },
+    ],
+  },
   { id: 'ch2', slug: 'ch2-contract', phase: 'prepare', order: 2, title: '계약 전 멈춤 — 정보공개서·가맹계약서', summary: '계약 전 반드시 확인할 것', body: Chapter2, sources: seedSource('ch2-seed') },
   { id: 'ch3', slug: 'ch3-location-license', phase: 'prepare', order: 3, title: '입지·상권·임대차·인허가', summary: '장소를 구하고 허가받기', body: Chapter3, sources: seedSource('ch3-seed') },
   { id: 'ch4', slug: 'ch4-startup-cost', phase: 'prepare', order: 4, title: '창업에 드는 돈 — 초기비용 전체 지도', summary: '초기비용과 최악의 손실 계산', body: Chapter4, sources: seedSource('ch4-seed') },
