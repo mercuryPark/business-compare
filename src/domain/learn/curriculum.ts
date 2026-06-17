@@ -14,20 +14,6 @@ export const PHASES: { id: LearnPhase; label: string }[] = [
   { id: 'respond', label: '대응' },
 ];
 
-// Seed each chapter with at least one draft source so curriculum invariants hold
-// before Part 2 authoring. Real sources are added with the content.
-const seedSource = (id: string): LearnChapter['sources'] => [
-  {
-    id,
-    category: 'general',
-    sourceTitle: '작성 예정',
-    sourceUrl: 'https://example.com',
-    lastCheckedAt: '2026-06-17',
-    reviewStatus: 'draft',
-    reviewer: null,
-  },
-];
-
 export const CHAPTERS: LearnChapter[] = [
   {
     id: 'ch1',
