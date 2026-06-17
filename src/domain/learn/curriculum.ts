@@ -178,6 +178,15 @@ export const CHAPTERS: LearnChapter[] = [
         reviewStatus: 'draft',
         reviewer: null,
       },
+      {
+        id: 'ch6-operations',
+        category: 'general',
+        sourceTitle: '소상공인시장진흥공단 — 운영·손익 일반 안내',
+        sourceUrl: 'https://www.semas.or.kr/',
+        lastCheckedAt: '2026-06-17',
+        reviewStatus: 'draft',
+        reviewer: null,
+      },
     ],
   },
   {

@@ -43,19 +43,17 @@ export function LearnPage({ route }: { route: Extract<LearnRoute, { view: 'learn
         <div className="mb-4 rounded-lg border border-line bg-cream p-3 text-xs text-muted">{DISCLAIMER}</div>
         <LearnSourcesProvider sources={chapter.sources}>
           <Body />
-        </LearnSourcesProvider>
-        <footer className="mt-6 rounded-lg border border-line bg-surface p-3">
-          <div className="mb-2 text-xs font-semibold text-muted">출처 및 검토 상태</div>
-          <ul className="space-y-1">
-            {chapter.sources.map((s) => (
-              <li key={s.id}>
-                <LearnSourcesProvider sources={chapter.sources}>
+          <footer className="mt-6 rounded-lg border border-line bg-surface p-3">
+            <div className="mb-2 text-xs font-semibold text-muted">출처 및 검토 상태</div>
+            <ul className="space-y-1">
+              {chapter.sources.map((s) => (
+                <li key={s.id}>
                   <SourceNote sourceId={s.id} />
-                </LearnSourcesProvider>
-              </li>
-            ))}
-          </ul>
-        </footer>
+                </li>
+              ))}
+            </ul>
+          </footer>
+        </LearnSourcesProvider>
         <LearnChapterNav activeSlug={chapter.slug} />
       </article>
     </div>

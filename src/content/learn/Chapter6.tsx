@@ -3,10 +3,12 @@ import { Caveat } from '../../components/learn/primitives/Caveat';
 import { CtaLink } from '../../components/learn/primitives/CtaLink';
 import { DecisionChecklist } from '../../components/learn/primitives/DecisionChecklist';
 import { NumericClaim } from '../../components/learn/primitives/NumericClaim';
+import { SourceBackedTable } from '../../components/learn/primitives/SourceBackedTable';
 import { TermExplainer } from '../../components/learn/primitives/TermExplainer';
 
 const MIN_WAGE_ID = 'ch6-minimumwage';
 const LABOR_ID = 'ch6-moel-labor';
+const OPERATIONS_ID = 'ch6-operations';
 
 export function Chapter6() {
   return (
@@ -47,9 +49,18 @@ export function Chapter6() {
         </p>
         <Callout tone="info">
           한 줄로 외워두면 좋은 식: <span className="font-semibold">손익분기 매출 = 고정비 ÷ (1 − 변동비율)</span>.
-          예를 들어 변동비율이 매출의 40%(예시)라면, 매출의 60%가 고정비를 메우는 데 쓰입니다.
-          고정비가 한 달 1,000만 원(예시)이면 손익분기 매출은 약 1,667만 원(예시)입니다.
+          변동비율이 높을수록 한 번 팔아 남는 돈이 적어, 같은 고정비라도 더 많이 팔아야
+          본전이 됩니다.
         </Callout>
+        <SourceBackedTable
+          caption="손익분기 매출 계산 예시"
+          rows={[
+            { label: '변동비율 (원재료·수수료 등)', value: '매출의 40%', note: '예시 가정' },
+            { label: '월 고정비 (임대료·인건비·이자)', value: '1,000만 원', note: '예시 가정' },
+            { label: '손익분기 월매출', value: '약 1,667만 원', note: '1,000만 ÷ (1 − 0.4)' },
+          ]}
+          sourceId={OPERATIONS_ID}
+        />
         <p className="text-sm text-ink">
           여기서 한 가지 함정이 있습니다. 손익분기점을 &lsquo;넘겼다&rsquo;고 안심하면 안 됩니다. 그
           계산에 <span className="font-semibold">사장님 본인의 인건비(생활비)와 세금 적립</span>이 빠져
