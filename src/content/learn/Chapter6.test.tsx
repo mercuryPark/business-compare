@@ -25,6 +25,7 @@ describe('Chapter6 content', () => {
     );
     expect(screen.getByText('최저임금(시급)')).toBeTruthy();
     expect(screen.getByText('주휴수당 발생 기준')).toBeTruthy();
+    expect(screen.getByText('4주 평균 1주 소정근로 15시간 이상 + 그 주 개근')).toBeTruthy();
     expect(screen.getByText('월 운영 체크리스트')).toBeTruthy();
   });
 });

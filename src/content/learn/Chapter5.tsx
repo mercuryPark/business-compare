@@ -11,7 +11,6 @@ import { TermExplainer } from '../../components/learn/primitives/TermExplainer';
 const ILLUSTRATION_ID = 'ch5-semas-cashflow';
 const VAT_ID = 'ch5-nts-vat';
 const INCOME_TAX_ID = 'ch5-nts-income-tax';
-const INSURE_ID = 'ch5-4insure';
 
 export function Chapter5() {
   return (
@@ -85,6 +84,7 @@ export function Chapter5() {
         </p>
         <CashflowWaterfall
           sourceId={ILLUSTRATION_ID}
+          illustrative
           steps={[
             { label: '월매출', amount: '예시 3,000만 원', kind: 'start' },
             { label: '원재료비', amount: '예시 900만 원', kind: 'deduction' },
@@ -116,14 +116,20 @@ export function Chapter5() {
           유무에 따라 달라집니다.
         </p>
         <CashflowCalendar
-          sourceId={INSURE_ID}
+          sourceId={VAT_ID}
           entries={[
             { month: '매달', item: '4대보험·원천세(직원 급여에서 원천징수·납부)' },
-            { month: '1·4·7·10월', item: '부가세 — 법인/일반과세 분기 신고·납부(유형별 상이)' },
-            { month: '1·7월', item: '부가세 — 개인 일반과세 반기 확정신고(유형별 상이)' },
+            { month: '1·4·7·10월', item: '법인사업자 부가세 신고·납부(분기별 연 4회)' },
+            { month: '1월·7월', item: '개인 일반과세자 부가세 확정신고(연 2회)' },
+            { month: '4월·10월', item: '개인 일반과세자 부가세 예정고지 납부(직전 납부세액의 1/2)' },
+            { month: '다음 해 1월', item: '개인 간이과세자 부가세 신고(연 1회)' },
             { month: '5월', item: '종합소득세 — 전년도 사업소득 확정신고·납부' },
           ]}
         />
+        <Caveat>
+          부가세 신고·납부 주기는 과세 유형(법인/개인 일반과세/간이과세)에 따라 다릅니다. 본인 유형에
+          맞는 정확한 신고·납부 시기는 국세청 안내와 세무사 확인이 필요합니다.
+        </Caveat>
         <p className="text-sm text-ink">
           위 캘린더에서 꼭 기억할 두 가지는{' '}
           <TermExplainer
@@ -170,6 +176,7 @@ export function Chapter5() {
             title="시나리오 A — 손익분기 부근"
             monthlySales="예시 2,000만 원"
             sourceId={ILLUSTRATION_ID}
+            illustrative
             lines={[
               { label: '원재료비', amount: '예시 −600만 원' },
               { label: '인건비(4대보험 포함)', amount: '예시 −650만 원' },
@@ -183,6 +190,7 @@ export function Chapter5() {
             title="시나리오 B — 자리 잡은 가게"
             monthlySales="예시 3,000만 원"
             sourceId={ILLUSTRATION_ID}
+            illustrative
             lines={[
               { label: '원재료비', amount: '예시 −900만 원' },
               { label: '인건비(4대보험 포함)', amount: '예시 −750만 원' },
@@ -196,6 +204,7 @@ export function Chapter5() {
             title="시나리오 C — 잘 되는 가게"
             monthlySales="예시 4,000만 원"
             sourceId={ILLUSTRATION_ID}
+            illustrative
             lines={[
               { label: '원재료비', amount: '예시 −1,200만 원' },
               { label: '인건비(4대보험 포함)', amount: '예시 −900만 원' },

@@ -67,8 +67,8 @@ export const CHAPTERS: LearnChapter[] = [
       {
         id: 'ch3-lease-guide',
         category: 'lease',
-        sourceTitle: '소상공인시장진흥공단 — 상가(상권)정보 / 임대차 안내',
-        sourceUrl: 'https://bigdata.sbiz.or.kr/',
+        sourceTitle: '찾기 쉬운 생활법령정보 — 상가건물 임대차보호법 적용 범위',
+        sourceUrl: 'https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=1&cciNo=2&cnpClsNo=1&csmSeq=627&popMenu=ov',
         lastCheckedAt: '2026-06-17',
         reviewStatus: 'draft',
         reviewer: null,
@@ -76,8 +76,8 @@ export const CHAPTERS: LearnChapter[] = [
       {
         id: 'ch3-restaurant-license',
         category: 'licensing',
-        sourceTitle: '식품의약품안전처 — 식품접객업 영업신고 안내',
-        sourceUrl: 'https://www.mfds.go.kr/',
+        sourceTitle: '보건소 — 식품접객업 신규 영업신고 안내',
+        sourceUrl: 'https://health.gangnam.go.kr/web/hygiene/report/food/sub01.do',
         lastCheckedAt: '2026-06-17',
         reviewStatus: 'draft',
         reviewer: null,
@@ -172,8 +172,8 @@ export const CHAPTERS: LearnChapter[] = [
       {
         id: 'ch6-moel-labor',
         category: 'wage',
-        sourceTitle: '고용노동부 — 표준근로계약서·주휴수당 안내',
-        sourceUrl: 'https://www.moel.go.kr/',
+        sourceTitle: '고용노동부 고객상담센터 — 주휴수당 안내',
+        sourceUrl: 'https://1350.moel.go.kr/rtmview.do?id=1000074928',
         lastCheckedAt: '2026-06-17',
         reviewStatus: 'draft',
         reviewer: null,

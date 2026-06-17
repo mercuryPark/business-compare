@@ -38,6 +38,7 @@ export function Chapter4() {
         <SourceBackedTable
           caption="초기비용 항목 지도 (작은 매장 예시 범위 · 실제와 다름)"
           sourceId={SOURCE_ID}
+          illustrative
           rows={[
             {
               label: '가맹비·교육비 (프랜차이즈)',
@@ -148,6 +149,7 @@ export function Chapter4() {
         <SourceBackedTable
           caption="폐업 시 추가로 잃는 돈 (예시 가정 · 실제와 다름)"
           sourceId={SOURCE_ID}
+          illustrative
           rows={[
             {
               label: '원상복구비',
