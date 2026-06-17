@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { parseLearnHash } from '../learn/route';
+import { CHAPTER_SLUGS } from '../learn/curriculum';
 
 const SLUGS = ['ch1-mindset-money', 'ch2-contract'];
 
@@ -34,5 +35,15 @@ describe('parseLearnHash', () => {
 
   it('falls back to home for anything else', () => {
     expect(parseLearnHash('#whatever', SLUGS)).toEqual({ view: 'home' });
+  });
+
+  it('resolves every real curriculum chapter deep link (backward-compat)', () => {
+    for (const slug of CHAPTER_SLUGS) {
+      expect(parseLearnHash(`#learn/${slug}`, CHAPTER_SLUGS)).toEqual({
+        view: 'learn',
+        mode: 'chapter',
+        chapterSlug: slug,
+      });
+    }
   });
 });

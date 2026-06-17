@@ -63,7 +63,7 @@ export function Home() {
       <section className="rounded-xl border border-dashed border-line p-4 text-center">
         <div className="text-sm text-muted">어느 정도 감을 잡았다면</div>
         <div className="mt-2 flex justify-center">
-          <ButtonLink href="#compare" variant="secondary">프랜차이즈 비용 비교하기</ButtonLink>
+          <ButtonLink href="#compare" variant="secondary">프랜차이즈 비용 비교해보기</ButtonLink>
         </div>
       </section>
     </div>
