@@ -7,7 +7,7 @@ beforeEach(() => { window.location.hash = ''; });
 afterEach(() => { window.location.hash = ''; });
 
 describe('useHashRoute', () => {
-  it('returns the compare view by default and updates on hashchange', () => {
+  it('returns the home view by default and updates on hashchange', () => {
     const { result } = renderHook(() => useHashRoute());
     expect(result.current).toEqual({ view: 'home' });
 
