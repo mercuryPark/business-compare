@@ -1,10 +1,14 @@
 # 창업 나침반 — Launch Readiness
 
-## Public launch scope (v1): learn-only
+## Public launch scope (v1): 학습 + 비교(검증 전 예시)
 - Default route → Home; 학습(8개 챕터) 공개.
-- 프랜차이즈 비교 대시보드는 **프로덕션 빌드에서 "준비 중"**으로 게이트됨
-  (`.env.production` → `VITE_COMPARE_ENABLED=false`). 프로토타입 브랜드 데이터를 공개하지 않음.
-  (개발/테스트/E2E는 플래그 기본 ON이라 대시보드가 그대로 동작·검증됨.)
+- 프랜차이즈 비교 대시보드도 **공개**(`src/config.ts` `COMPARE_ENABLED = true`). 단, 브랜드별
+  비용·매출이 아직 프로토타입(미검증) 데이터라 `CompareView` 최상단에 **"검증 전 예시 데이터"
+  경고 배너**(role="alert")를 노출함.
+- 재게이트가 필요하면 `src/config.ts`의 `COMPARE_ENABLED`를 `false`로 두면 `#compare`가
+  "준비 중" 안내(`ComparePending`)로 바뀜.
+- 참고: `.env.production`의 `VITE_COMPARE_ENABLED`는 더 이상 사용하지 않음(게이트는 config.ts에서
+  직접 제어). 정리하려면 `.env.production`을 삭제해도 됨.
 
 ## Before sharing publicly (do these)
 - [ ] `npm test` 그린, `npm run build` 성공.
@@ -22,8 +26,11 @@
 - 공개는 가능하나, 이를 "검증된 정보"로 격상하려면 세무사·노무사·가맹거래사 검토 후 해당
   `LearnSource.reviewStatus`를 `expert-reviewed`로 올리고 `npm run check:learn-sources` 통과.
 
-## Before un-gating compare (future milestone)
+## Compare is public with prototype data — finish these to drop the warning banner
+비교 화면이 이미 공개돼 실명 브랜드의 미검증 수치가 노출됩니다. "검증 전 예시" 경고 배너를
+제거하고 신뢰할 수 있는 비교로 만들려면:
 - [ ] 브랜드 P0 데이터 2차 검수·모델 QA 통과(정보공개서 원문 대조).
 - [ ] 정정 요청 경로(`CorrectionCta`) 노출·동작 확인.
 - [ ] 브랜드 대면 문구 법률 검토.
-- [ ] `.env.production`에서 `VITE_COMPARE_ENABLED=false` 제거(또는 `true`)로 비교 공개.
+- [ ] 검증 완료 후 `CompareView`의 경고 배너 제거.
+- 위 검증 전까지 공개를 멈추고 싶으면 `src/config.ts` `COMPARE_ENABLED = false`로 재게이트.

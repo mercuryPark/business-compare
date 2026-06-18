@@ -1,3 +1,4 @@
-// Compare dashboard uses prototype brand data; it is gated OFF in the production
-// build (.env.production) until the data is verified. Dev/test/e2e default ON.
-export const COMPARE_ENABLED = import.meta.env.VITE_COMPARE_ENABLED !== 'false';
+// Compare dashboard is public. Its brand data is still prototype-level, so CompareView
+// shows a "검증 전 예시 데이터" warning banner. To re-gate it behind the "준비 중" notice
+// (e.g. before verifying data), set this to false.
+export const COMPARE_ENABLED = true;

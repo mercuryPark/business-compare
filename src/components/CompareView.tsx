@@ -38,6 +38,13 @@ export function CompareView() {
 
   return (
     <>
+      <div
+        role="alert"
+        className="rounded-lg border border-watch/40 bg-watch/10 p-3 text-sm font-semibold text-watch"
+      >
+        ⚠ 표시된 브랜드별 비용·매출 수치는 아직 검증 전 예시(프로토타입) 데이터입니다. 실제 창업 판단
+        전에는 정보공개서 원문과 세무사·전문가 확인이 필요합니다.
+      </div>
       <Dashboard
         brands={brands}
         category={category}
