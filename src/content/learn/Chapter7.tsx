@@ -9,10 +9,10 @@ export function Chapter7() {
       <header className="space-y-2">
         <h2 className="text-xl font-semibold text-ink">매출이 안 나올 때 — 진단과 회복</h2>
         <p className="text-muted">
-          매출이 떨어지면 누구나 마음이 급해집니다. 하지만 원인을 모른 채 &lsquo;일단 줄이고
-          일단 버티는&rsquo; 대응은 오히려 가게를 더 빨리 망가뜨립니다. 이 장은 무엇부터
-          의심할지(진단 순서), 어떤 비용은 줄여도 되고 어떤 비용은 줄이면 안 되는지, 그리고
-          버틸지 손절할지를 숫자로 판단하는 법을 정리합니다.
+          매출이 떨어질 때 가장 위험한 건 원인을 모른 채 &lsquo;일단 줄이고 일단 버티는&rsquo;
+          대응입니다. 엉뚱한 곳을 손대면 가게가 더 빨리 망가집니다. 이 장은 무엇부터
+          의심할지(진단 순서), 어떤 비용은 줄여도 되고 어떤 비용은 줄이면 안 되는지, 버틸지
+          손절할지를 숫자로 판단하는 법을 정리합니다.
         </p>
       </header>
 
@@ -25,15 +25,15 @@ export function Chapter7() {
       <section className="space-y-3">
         <h3 className="text-lg font-semibold text-ink">1. 원인 진단 순서 — 매출? 원가? 고정비?</h3>
         <p className="text-sm text-ink">
-          &lsquo;돈이 안 남는다&rsquo;는 같은 증상이라도 원인은 셋 중 하나(또는 여럿)입니다. 순서대로
-          따져야 엉뚱한 곳을 고치지 않습니다.
+          &lsquo;돈이 안 남는다&rsquo;는 같은 증상이라도 원인은 셋 중 하나(또는 여럿)입니다.
+          아래 순서대로 따져야 엉뚱한 곳을 고치지 않습니다.
         </p>
         <ol className="list-decimal space-y-2 pl-5 text-sm text-ink">
           <li>
             <span className="font-semibold">매출이 줄었나?</span> &mdash; 손님 수가 줄었는지, 객단가가
-            낮아졌는지부터 본다. 요일·시간대별로 쪼개 보면 &lsquo;전체가 빠졌는지, 특정 시간만
-            빠졌는지&rsquo;가 드러납니다. 외부 요인(상권 변화·경쟁점 오픈)인지, 내부 요인(맛·서비스·재방문
-            하락)인지 구분.
+            낮아졌는지부터 봅니다. 요일·시간대별로 쪼개 보면 전체가 빠졌는지, 특정 시간만 빠졌는지가
+            드러납니다. 외부 요인(상권 변화·경쟁점 오픈)인지 내부 요인(맛·서비스·재방문 하락)인지
+            구분하세요.
           </li>
           <li>
             <span className="font-semibold">원가가 올랐나?</span> &mdash; 매출은 그대로인데 안 남는다면
@@ -41,11 +41,11 @@ export function Chapter7() {
               term="원가율"
               explanation="매출에서 원재료비 등 변동비가 차지하는 비율. 이 비율이 오르면 같은 매출에도 손에 남는 돈이 줄어듭니다."
             />
-            이 오른 경우. 식자재 단가 인상, 폐기 로스 증가, 레시피 양 조절 실패를 의심.
+            이 오른 경우입니다. 식자재 단가 인상, 폐기 로스 증가, 레시피 양 조절 실패를 의심하세요.
           </li>
           <li>
             <span className="font-semibold">고정비가 무거운가?</span> &mdash; 매출·원가가 그대로인데
-            적자라면 임대료·인건비·대출이자 같은 고정비가 매출 규모에 비해 큰 구조. 이건 하루아침에
+            적자라면 임대료·인건비·대출이자 같은 고정비가 매출 규모에 비해 큰 구조입니다. 하루아침에
             바꾸기 가장 어려운 항목입니다.
           </li>
         </ol>
@@ -59,7 +59,7 @@ export function Chapter7() {
       <section className="space-y-3">
         <h3 className="text-lg font-semibold text-ink">2. 줄여도 되는 비용 vs 줄이면 안 되는 비용</h3>
         <p className="text-sm text-ink">
-          비용을 줄일 때 가장 흔한 실수는 &lsquo;당장 티 안 나는 것&rsquo;부터 자르는 것입니다. 그런데
+          비용을 줄일 때 가장 흔한 실수는 당장 티가 안 나는 것부터 자르는 것입니다. 그러나
           티가 안 나는 비용일수록 매출의 뿌리인 경우가 많습니다.
         </p>
         <div className="grid gap-3 sm:grid-cols-2">
@@ -91,9 +91,9 @@ export function Chapter7() {
       <section className="space-y-3">
         <h3 className="text-lg font-semibold text-ink">3. 버티기 vs 손절 — 감정이 아니라 숫자로</h3>
         <p className="text-sm text-ink">
-          가장 어려운 결정입니다. 사람들은 &lsquo;여기까지 쏟아부었는데&rsquo; 하는 마음(매몰비용)
-          때문에 손절 시점을 놓칩니다. 하지만 이미 쓴 돈은 돌아오지 않습니다. 판단의 기준은
-          과거가 아니라 <span className="font-semibold">&lsquo;앞으로 더 잃을 돈&rsquo;</span>입니다.
+          판단 기준은 과거가 아니라 <span className="font-semibold">&lsquo;앞으로 더 잃을 돈&rsquo;</span>입니다.
+          사람들은 &lsquo;여기까지 쏟아부었는데&rsquo; 하는 마음(매몰비용) 때문에 손절 시점을
+          놓치지만, 이미 쓴 돈은 돌아오지 않습니다.
         </p>
         <ul className="list-disc space-y-2 pl-5 text-sm text-ink">
           <li>
@@ -114,7 +114,7 @@ export function Chapter7() {
         <Callout tone="warning">
           결정 전에 반드시 <span className="font-semibold">&lsquo;지금 닫으면 최종적으로 얼마를 잃는가&rsquo;</span>를
           숫자로 계산하세요. 남은 대출 잔액, 원상복구비, 회수 못 한 권리금, 중도해지 위약금, 재고
-          처리까지 합친 &lsquo;최악의 손실&rsquo; 계산을 CH4에서 다뤘습니다. 버틸 때 더 잃을 돈과, 지금
+          처리까지 합친 &lsquo;최악의 손실&rsquo; 계산은 CH4에서 다뤘습니다. 버틸 때 더 잃을 돈과 지금
           닫을 때 잃는 돈을 나란히 놓고 비교해야 후회 없는 결정이 됩니다.
         </Callout>
         <CtaLink href="#learn/ch4-startup-cost">최악의 경우 잃는 돈 계산 다시 보기</CtaLink>
@@ -123,8 +123,8 @@ export function Chapter7() {
       <section className="space-y-3">
         <h3 className="text-lg font-semibold text-ink">4. 폐업·양도 — 닫는 데도 돈과 절차가 든다</h3>
         <p className="text-sm text-ink">
-          가게를 닫는 것은 &lsquo;그만두면 끝&rsquo;이 아닙니다. 돈과 행정 절차가 함께 따라옵니다. 닫기로
-          했다면 이 비용들을 미리 합산해, &lsquo;닫는 비용&rsquo;까지가 손절 손실임을 받아들여야 합니다.
+          가게를 닫는 것은 &lsquo;그만두면 끝&rsquo;이 아니라 돈과 행정 절차가 함께 따라옵니다. 닫기로
+          했다면 아래 비용을 미리 합산해, &lsquo;닫는 비용&rsquo;까지가 손절 손실임을 받아들여야 합니다.
         </p>
         <ul className="list-disc space-y-1 pl-5 text-sm text-ink">
           <li>
@@ -150,8 +150,8 @@ export function Chapter7() {
         <h3 className="text-base font-semibold text-ink">반대로, 매출이 잘 나올 때는?</h3>
         <p className="text-sm text-ink">
           위기만큼이나 위험한 순간이 &lsquo;잘 될 때&rsquo;입니다. 잘 벌수록 세금이 커지고, 성급한 2호점
-          확장과 번아웃이 그동안 쌓은 것을 한 번에 무너뜨립니다. 다음 장에서 지속과 확장의
-          기본기를 정리합니다.
+          확장과 번아웃이 그동안 쌓은 것을 한 번에 무너뜨립니다. 다음 장에서 지속과 확장의 기본기를
+          정리합니다.
         </p>
         <CtaLink href="#learn/ch8-high-sales">매출이 잘 나올 때 — 지속과 확장 보러 가기</CtaLink>
       </section>
