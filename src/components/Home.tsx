@@ -1,5 +1,6 @@
 import { CHAPTERS, PHASES } from '../domain/learn/curriculum';
 import { ButtonLink } from './learn/primitives/ButtonLink';
+import { COMPARE_ENABLED } from '../config';
 
 const QUICK_CARDS = [
   { label: '🚦 지금 시작해도 될까?', desc: '10분 자가진단', href: '#learn/ch1-mindset-money' },
@@ -63,7 +64,9 @@ export function Home() {
       <section className="rounded-xl border border-dashed border-line p-4 text-center">
         <div className="text-sm text-muted">어느 정도 감을 잡았다면</div>
         <div className="mt-2 flex justify-center">
-          <ButtonLink href="#compare" variant="secondary">프랜차이즈 비용 비교해보기</ButtonLink>
+          <ButtonLink href="#compare" variant="secondary">
+            {COMPARE_ENABLED ? '프랜차이즈 비용 비교해보기' : '프랜차이즈 비용 비교 (준비 중)'}
+          </ButtonLink>
         </div>
       </section>
     </div>
