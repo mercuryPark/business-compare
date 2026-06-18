@@ -15,8 +15,8 @@ export function Chapter2() {
         <h2 className="text-xl font-semibold text-ink">계약 전 멈춤 — 정보공개서·가맹계약서 읽기</h2>
         <p className="text-muted">
           프랜차이즈 계약은 한번 도장을 찍으면 되돌리기가 매우 어렵습니다. 그래서 계약 전에
-          본사가 보여주는 자료를 직접 읽고, 모르는 조항은 반드시 물어봐야 합니다. 이 장은
-          &lsquo;무엇을 읽고, 무엇을 확인하고, 무엇을 물어볼지&rsquo;를 순서대로 정리합니다.
+          본사 자료를 직접 읽고, 모르는 조항은 반드시 물어봐야 합니다. 이 장은 무엇을 읽고,
+          확인하고, 물어볼지를 순서대로 정리합니다.
         </p>
       </header>
 
@@ -27,10 +27,10 @@ export function Chapter2() {
             term="정보공개서"
             explanation="가맹본부의 사업 현황, 가맹점 수, 가맹점 평균 매출, 가맹점이 부담하는 비용, 분쟁·소송 내역 등을 정해진 양식으로 적어 가맹희망자에게 제공하는 공식 문서입니다. 공정거래위원회에 등록됩니다."
           />
-          는 본사가 마음대로 만든 홍보 자료가 아니라, 법에 따라 일정한 양식으로 작성해
-          공정거래위원회에 등록하는 문서입니다. 등록된 정보공개서는{' '}
+          는 홍보 자료가 아니라, 법에 따라 일정한 양식으로 작성해 공정거래위원회에 등록하는
+          문서입니다. 등록된 정보공개서는{' '}
           <span className="font-semibold">공정위 가맹사업거래 사이트에서 누구나 조회</span>할 수
-          있으니, 본사가 준 PDF만 믿지 말고 직접 등록본을 확인하세요.
+          있습니다. 본사가 준 PDF만 믿지 말고 직접 등록본을 확인하세요.
         </p>
         <NumericClaim
           label="정보공개서 사전 제공 의무"
@@ -39,9 +39,8 @@ export function Chapter2() {
           sourceId={SOURCE_ID}
         />
         <p className="text-sm text-ink">
-          즉, 정보공개서를 받자마자 그날 바로 계약하는 것은 정상적인 절차가 아닙니다. 충분히
-          읽고 따질 시간을 주는 것이 본사의 의무입니다. 서두르라고 재촉하는 본사일수록 더
-          꼼꼼히 읽어야 합니다.
+          받자마자 그날 바로 계약하는 것은 정상적인 절차가 아닙니다. 충분히 읽고 따질 시간을
+          주는 것이 본사의 의무입니다. 서두르라고 재촉하는 본사일수록 더 꼼꼼히 읽으세요.
         </p>
         <Callout tone="info">
           정보공개서에서 특히 볼 곳: <span className="font-semibold">① 가맹점 수의 증감(최근 몇 년간
@@ -58,9 +57,9 @@ export function Chapter2() {
             term="예상매출액 산정서"
             explanation="본사가 가맹희망자에게 장래 예상되는 매출액의 범위와 그 산출 근거를 서면으로 제공하는 문서입니다. 일정 규모 이상의 가맹본부는 이를 서면으로 제공할 의무가 있습니다."
           />
-          는 &lsquo;이 정도 벌 수 있다&rsquo;는 약속이 아니라 &lsquo;범위와 근거&rsquo;를 적은
+          는 &lsquo;이 정도 벌 수 있다&rsquo;는 약속이 아니라, 예상 범위와 그 근거를 적은
           문서입니다. 핵심은 숫자 자체가 아니라{' '}
-          <span className="font-semibold">그 숫자가 어떻게 나왔는가(산출 근거)</span>입니다.
+          <span className="font-semibold">그 숫자가 어떻게 나왔는가</span>입니다.
         </p>
         <ul className="list-disc space-y-1 pl-5 text-sm text-ink">
           <li>비슷한 입지·면적의 기존 점포 실제 매출을 근거로 했는가, 아니면 본사 희망치인가?</li>
@@ -86,8 +85,8 @@ export function Chapter2() {
             <h4 className="mb-1 text-sm font-semibold text-forest">영업지역 보장</h4>
             <p className="text-sm text-ink">
               내 가게 근처에 같은 브랜드 매장이 또 들어올 수 있는지 확인하세요. 영업지역이
-              계약서에 구체적으로(반경·행정동 등) 적혀 있는지, 본사가 일방적으로 지역을 좁히거나
-              온라인·배달로 침범할 여지가 없는지 따져야 합니다.
+              계약서에 구체적으로(반경·행정동 등) 적혀 있어야 합니다. 본사가 일방적으로 지역을
+              좁히거나 온라인·배달로 침범할 여지는 없는지 따지세요.
             </p>
           </div>
           <div className="rounded-xl border border-line bg-surface p-4">
@@ -99,7 +98,7 @@ export function Chapter2() {
                 term="차액가맹금"
                 explanation="본사가 가맹점에 공급하는 물품·원재료의 가격에 일정 마진을 붙여 받는 금액. 로열티처럼 눈에 잘 띄지 않지만, 필수구매 품목을 통해 사실상 매달 본사로 나가는 비용입니다."
               />
-              은 로열티처럼 드러나지 않으면서 매달 빠져나가는 돈이라, 실제 부담을 키웁니다.
+              은 로열티처럼 드러나지 않으면서 매달 빠져나가는 돈이라 실제 부담을 키웁니다.
               필수품목 목록과 공급가가 계약서·정보공개서에 적혀 있는지 보세요.
             </p>
           </div>
@@ -123,8 +122,8 @@ export function Chapter2() {
             <h4 className="mb-1 text-sm font-semibold text-forest">인테리어 재시공 조건</h4>
             <p className="text-sm text-ink">
               본사 방침에 따라 일정 주기로 인테리어를 다시 해야 하는 조항이 있는지 확인하세요.
-              재시공을 누가, 어떤 주기로, 누구 부담으로 하는지에 따라 수백만~수천만 원의 추가
-              비용이 갑자기 생길 수 있습니다.
+              재시공을 누가, 어떤 주기로, 누구 부담으로 하는지에 따라 큰 추가 비용이 갑자기 생길
+              수 있습니다.
             </p>
           </div>
         </div>
@@ -181,7 +180,7 @@ export function Chapter2() {
         <h3 className="text-base font-semibold text-ink">계약서를 읽었다면, 다음은 &lsquo;장소&rsquo;입니다</h3>
         <p className="text-sm text-ink">
           좋은 계약 조건이라도 상권과 입지가 맞지 않으면 매출이 따라오지 않습니다. 다음 장에서는
-          상권 보는 법, 임대차계약의 함정, 그리고 업종별 인허가 절차를 정리합니다.
+          상권 보는 법, 임대차계약의 함정, 업종별 인허가 절차를 정리합니다.
         </p>
         <CtaLink href="#learn/ch3-location-license">입지·상권·임대차·인허가 보러 가기</CtaLink>
       </section>

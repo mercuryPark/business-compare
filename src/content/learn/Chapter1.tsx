@@ -46,8 +46,8 @@ export function Chapter1() {
       <section className="space-y-3">
         <h3 className="text-lg font-semibold text-ink">2. 자기자본 vs 대출 — 비율의 원칙</h3>
         <p className="text-sm text-ink">
-          창업 자금을 어떻게 마련하느냐가 가게의 체력을 결정합니다. 대출 비중이 높을수록 매달
-          나가는 이자가 고정비처럼 쌓이고, 매출이 잠깐 흔들릴 때 버틸 힘이 줄어듭니다.
+          자금을 어떻게 마련하느냐가 가게의 체력을 결정합니다. 대출 비중이 높을수록 매달
+          이자가 고정비처럼 쌓여, 매출이 잠깐 흔들릴 때 버틸 힘이 줄어듭니다.
         </p>
         <NumericClaim
           label="권장 자기자본 비율"
@@ -75,7 +75,7 @@ export function Chapter1() {
             term="운전자금"
             explanation="가게를 정상적으로 굴리는 데 매달 필요한 돈. 임대료, 인건비, 재료비, 공과금, 대출이자 등 운영비와 사장님 본인의 생활비를 포함합니다."
           />
-          이 떨어지면, 가게가 망해서가 아니라 버틸 돈이 없어서 문을 닫게 됩니다.
+          이 떨어지면, 가게가 망해서가 아니라 버틸 돈이 없어서 문을 닫습니다.
         </p>
         <NumericClaim
           label="권장 예비 운전자금"
@@ -150,8 +150,8 @@ export function Chapter1() {
         <h3 className="text-base font-semibold text-ink">&ldquo;잘 안 되면 얼마를 잃는가&rdquo;</h3>
         <p className="text-sm text-ink">
           멈춤 조건의 핵심은 결국 손실입니다. 가게를 닫을 때 남는 대출, 원상복구비, 회수하지 못한
-          권리금까지 합치면 생각보다 큰 돈을 잃을 수 있습니다. 구체적인 최악의 손실 계산은 초기비용
-          장에서 숫자로 따져봅니다.
+          권리금까지 합치면 생각보다 큰 돈을 잃을 수 있습니다. 구체적인 계산은 초기비용 장에서
+          숫자로 따져봅니다.
         </p>
         <CtaLink href="#learn/ch4-startup-cost">최악의 경우 잃는 돈 계산 보러 가기</CtaLink>
       </section>

@@ -12,9 +12,9 @@ export function Chapter8() {
       <header className="space-y-2">
         <h2 className="text-xl font-semibold text-ink">매출이 잘 나올 때 — 지속과 확장</h2>
         <p className="text-muted">
-          잘 되는 가게가 무너지는 이유는 매출 부족이 아니라, 잘 될 때 방심하는 데 있습니다.
-          잘 벌수록 세금이 커지고, 통장의 여윳돈을 보고 성급하게 2호점을 내며, 사장님 본인이
-          번아웃으로 쓰러집니다. 이 장은 잘 나갈 때 지켜야 할 것들을 정리합니다.
+          잘 되는 가게가 무너지는 이유는 매출 부족이 아니라 잘 될 때의 방심입니다. 잘 벌수록
+          세금이 커지고, 통장의 여윳돈을 보고 성급하게 2호점을 내며, 사장님 본인이 번아웃으로
+          쓰러집니다. 이 장은 잘 나갈 때 지켜야 할 것들을 정리합니다.
         </p>
       </header>
 
@@ -47,9 +47,8 @@ export function Chapter8() {
         />
         <Callout tone="warning">
           가장 흔한 사고는 <span className="font-semibold">&lsquo;잘 벌던 해의 세금을 떼어 두지 않는 것&rsquo;</span>입니다.
-          종합소득세는 다음 해 5월에 한꺼번에 정산되므로, 잘 번 해일수록 5월에 큰 세금이 나옵니다.
-          벌 때마다 일정 비율을 세금 통장에 미리 떼어 두지 않으면, 흑자인데도 납부 시기에 현금이
-          막힙니다.
+          종합소득세는 다음 해 5월에 한꺼번에 정산되므로, 잘 번 해일수록 5월에 더 큰 세금이 나옵니다.
+          벌 때마다 일부를 세금 통장에 미리 떼어 두지 않으면, 흑자인데도 납부 시기에 현금이 막힙니다.
         </Callout>
         <p className="text-sm text-ink">
           매출이 늘면 부가세 부담과 4대보험(직원 증가 시)도 함께 커집니다. &lsquo;매달 받은 부가세는 내
@@ -60,8 +59,8 @@ export function Chapter8() {
       <section className="space-y-3">
         <h3 className="text-lg font-semibold text-ink">2. 재투자 vs 저축 — 여윳돈을 다 쓰지 않기</h3>
         <p className="text-sm text-ink">
-          잘 될 때 통장에 쌓인 돈은 &lsquo;전부 내 이익&rsquo;처럼 보이지만, 그 안에는 아직 내지 않은
-          세금과 앞으로 쓸 재투자·예비자금이 섞여 있습니다. 여윳돈은 세 갈래로 나눠 두세요.
+          통장 잔고는 전부 내 이익이 아닙니다. 그 안에는 아직 내지 않은 세금과 앞으로 쓸
+          재투자·예비자금이 섞여 있습니다. 여윳돈은 아래 세 갈래로 나눠 두세요.
         </p>
         <ul className="list-disc space-y-2 pl-5 text-sm text-ink">
           <li>
@@ -87,9 +86,9 @@ export function Chapter8() {
       <section className="space-y-3">
         <h3 className="text-lg font-semibold text-ink">3. 2호점·다점포의 함정</h3>
         <p className="text-sm text-ink">
-          1호점이 잘 되면 자연스레 2호점을 떠올립니다. 하지만 2호점은 1호점의 복사가 아닙니다.
-          가장 큰 함정은 <span className="font-semibold">1호점의 성공이 &lsquo;사장님이 직접 붙어 있었기
-          때문&rsquo;</span>인 경우입니다. 사장이 둘로 쪼개지면 두 매장 모두 평범해질 수 있습니다.
+          2호점은 1호점의 복사가 아닙니다. 가장 큰 함정은 <span className="font-semibold">1호점의 성공이
+          &lsquo;사장님이 직접 붙어 있었기 때문&rsquo;</span>인 경우입니다. 사장이 둘로 쪼개지면 두 매장 모두
+          평범해질 수 있습니다.
         </p>
         <ul className="list-disc space-y-1 pl-5 text-sm text-ink">
           <li>2호점은 별도의 초기비용·임대·인력이 다시 드는 &lsquo;새 창업&rsquo;입니다.</li>
@@ -105,8 +104,8 @@ export function Chapter8() {
       <section className="space-y-3">
         <h3 className="text-lg font-semibold text-ink">4. 번아웃·사람 관리 — 사장이 무너지면 가게가 무너진다</h3>
         <p className="text-sm text-ink">
-          잘 되는 가게일수록 사장님이 가장 오래, 가장 많이 일합니다. 그런데 사장님의 체력과
-          판단력은 가게의 가장 중요한 자산입니다. 번아웃은 게으름이 아니라 &lsquo;관리 실패&rsquo;로
+          사장님의 체력과 판단력은 가게의 가장 중요한 자산입니다. 잘 되는 가게일수록 사장님이
+          가장 오래, 가장 많이 일하기에 더 위험합니다. 번아웃은 게으름이 아니라 &lsquo;관리 실패&rsquo;로
           봐야 합니다.
         </p>
         <ul className="list-disc space-y-1 pl-5 text-sm text-ink">
@@ -124,8 +123,8 @@ export function Chapter8() {
         <h3 className="text-base font-semibold text-ink">이제, 배운 것으로 브랜드를 비교할 차례입니다</h3>
         <p className="text-sm text-ink">
           여기까지 왔다면 창업의 준비·계약·비용·운영·대응을 한 바퀴 둘러본 셈입니다. 이제 이
-          기준들을 손에 쥐고, 본사가 말하는 숫자를 곧이곧대로 믿는 대신 직접 따져 보세요.
-          브랜드별 비용·매출·운영 부담을 비교하며 학습을 실제 선택으로 연결할 차례입니다.
+          기준을 손에 쥐고, 본사가 말하는 숫자를 곧이곧대로 믿는 대신 직접 따져 보세요. 브랜드별
+          비용·매출·운영 부담을 비교하며 학습을 실제 선택으로 연결할 차례입니다.
         </p>
         <CtaLink href="#compare">이제 브랜드별로 비교해보기</CtaLink>
       </section>

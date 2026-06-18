@@ -13,9 +13,9 @@ export function Chapter3() {
       <header className="space-y-2">
         <h2 className="text-xl font-semibold text-ink">입지·상권·임대차·인허가</h2>
         <p className="text-muted">
-          계약 조건이 좋아도 장소가 맞지 않으면 매출이 따라오지 않습니다. 이 장은 상권과 입지를
-          보는 법, 임대차계약에서 자주 걸려 넘어지는 함정, 그리고 가게 문을 열기까지 거쳐야 하는
-          사업자등록·영업신고·인허가 순서를 정리합니다.
+          계약 조건이 좋아도 장소가 맞지 않으면 매출은 따라오지 않습니다. 이 장은 세 가지를
+          정리합니다. 상권과 입지를 보는 법, 임대차계약에서 자주 걸려 넘어지는 함정, 그리고 가게
+          문을 열기까지 거치는 사업자등록·영업신고·인허가 순서입니다.
         </p>
       </header>
 
@@ -24,7 +24,7 @@ export function Chapter3() {
         <p className="text-sm text-ink">
           입지는 한번 정하면 바꾸기 어렵습니다. 그래서 발품과 함께 공식 데이터를 같이 봐야
           합니다. 소상공인시장진흥공단의 상권분석 서비스에서 업종별 점포 수, 매출 추이, 유동인구,
-          배후 인구 같은 객관적인 지표를 무료로 확인할 수 있습니다.
+          배후 인구 같은 지표를 무료로 확인할 수 있습니다.
         </p>
         <ul className="list-disc space-y-1 pl-5 text-sm text-ink">
           <li>
@@ -53,17 +53,17 @@ export function Chapter3() {
       <section className="space-y-3">
         <h3 className="text-lg font-semibold text-ink">2. 임대차계약의 함정</h3>
         <p className="text-sm text-ink">
-          상가 임대차는 살림집 전월세와 다릅니다. 권리금, 환산보증금, 특약 같은 개념을 모르면
-          큰돈이 묶이거나 떼일 수 있습니다.
+          상가 임대차는 살림집 전월세와 다릅니다. 권리금, 환산보증금, 특약 같은 개념을 모른 채
+          도장을 찍으면 큰돈이 묶이거나 떼일 수 있습니다.
         </p>
         <div className="space-y-3">
           <div className="rounded-xl border border-line bg-surface p-4">
             <h4 className="mb-1 text-sm font-semibold text-forest">권리금</h4>
             <p className="text-sm text-ink">
               기존 임차인에게 자리·시설·단골(영업가치)의 대가로 주는 돈입니다. 임대인이 아니라
-              앞 임차인에게 주는 돈이라, 계약서(임대차)에는 잘 나타나지 않습니다.{' '}
+              앞 임차인에게 주는 돈이라, 임대차계약서에는 잘 나타나지 않습니다.{' '}
               <span className="font-semibold">나갈 때 그 권리금을 회수할 수 있다는 보장은
-              없습니다.</span> 권리금이 적정한지, 회수 가능성이 있는지 신중히 따지세요.
+              없습니다.</span> 권리금이 적정한지, 회수할 가능성이 있는지 신중히 따지세요.
             </p>
           </div>
           <div className="space-y-3 rounded-xl border border-line bg-surface p-4">
@@ -74,9 +74,9 @@ export function Chapter3() {
                 explanation="보증금 + (월세 × 100)으로 계산한 금액. 상가건물 임대차보호법의 일부 보호를 받을 수 있는지를 가르는 기준으로 쓰입니다. 지역별로 기준 금액이 다릅니다."
               />
               은 <span className="font-semibold">보증금 + (월세 × 100)</span>으로 계산한 금액입니다.
-              흔히 &lsquo;이 기준을 넘으면 보호를 못 받는다&rsquo;고 오해하지만, 실제로는{' '}
-              <span className="font-semibold">기준과 무관하게 적용되는 보호</span>와{' '}
-              <span className="font-semibold">기준 이하일 때만 적용되는 보호</span>가 나뉩니다.
+              흔히 &lsquo;이 기준을 넘으면 보호를 못 받는다&rsquo;고 오해합니다. 하지만 실제로는
+              보호가 둘로 나뉩니다. 기준과 무관하게 적용되는 보호가 있고, 기준 이하일 때만 적용되는
+              보호가 따로 있습니다.
             </p>
             <SourceBackedTable
               caption="환산보증금 기준과 상가건물 임대차보호법 적용 범위"
@@ -117,17 +117,17 @@ export function Chapter3() {
           <div className="rounded-xl border border-line bg-surface p-4">
             <h4 className="mb-1 text-sm font-semibold text-forest">특약</h4>
             <p className="text-sm text-ink">
-              계약서 맨 아래 &lsquo;특약사항&rsquo;에 실제 불리한 조건이 숨어 있는 경우가 많습니다.
-              원상복구 범위, 월세 인상 조건, 임대인 변경 시 처리, 명도(나가는) 조건 등을 한 줄씩
-              확인하고, 구두 약속은 반드시 특약에 적어 넣으세요.
+              불리한 조건은 계약서 맨 아래 &lsquo;특약사항&rsquo;에 숨어 있는 경우가 많습니다.
+              원상복구 범위, 월세 인상 조건, 임대인 변경 시 처리, 명도(나가는) 조건을 한 줄씩
+              확인하세요. 구두 약속은 반드시 특약에 적어 넣어야 효력이 생깁니다.
             </p>
           </div>
           <div className="rounded-xl border border-line bg-surface p-4">
             <h4 className="mb-1 text-sm font-semibold text-forest">인테리어·시설</h4>
             <p className="text-sm text-ink">
               계약 전에 전기 용량, 급·배수, 가스, 환기·후드, 화장실 같은 기본 설비가 내 업종에
-              맞는지 확인하세요. 설비를 새로 끌어오면 비용이 크게 늘고, 건물 구조상 불가능한
-              경우도 있습니다. 또한 나갈 때의 원상복구 범위를 미리 합의해 두세요.
+              맞는지 확인하세요. 설비를 새로 끌어오면 비용이 크게 늘고, 건물 구조상 아예 불가능한
+              경우도 있습니다. 나갈 때의 원상복구 범위도 미리 합의해 두세요.
             </p>
           </div>
         </div>
@@ -136,9 +136,10 @@ export function Chapter3() {
       <section className="space-y-3">
         <h3 className="text-lg font-semibold text-ink">3. 사업자등록·영업신고 순서</h3>
         <p className="text-sm text-ink">
-          순서를 잘못 잡으면 시설을 다 갖췄는데 영업신고가 막히거나, 신고 없이 영업해 처벌받을 수
-          있습니다. 음식점을 예로 들면 대체로 아래 단계를 <span className="font-semibold">순서대로</span>{' '}
-          밟습니다. 특히 첫 단계인 &lsquo;영업 가능한 자리인지&rsquo; 확인이 가장 먼저입니다.
+          순서를 잘못 잡으면 시설을 다 갖춰 놓고도 영업신고가 막히거나, 신고 없이 영업해 처벌받을
+          수 있습니다. 음식점은 대체로 아래 단계를{' '}
+          <span className="font-semibold">순서대로</span> 밟습니다. 그중 첫 단계인 &lsquo;영업
+          가능한 자리인지&rsquo; 확인이 무엇보다 먼저입니다.
         </p>
         <SourceBackedTable
           caption="음식점 인허가 진행 순서 (단계 / 무엇을 / 어디서)"
@@ -178,10 +179,9 @@ export function Chapter3() {
         <h3 className="text-lg font-semibold text-ink">4. 업종별 인허가 체크 매트릭스 (음식점 예)</h3>
         <p className="text-sm text-ink">
           업종마다 필요한 신고·교육·검사가 다릅니다. 아래는 일반적인 음식점 기준의 체크
-          항목입니다. 위생교육·보건증·소방 시설은 &lsquo;나중에 챙기는 일&rsquo;이 아니라{' '}
-          <span className="font-semibold">영업신고의 선행 조건(전제)</span>인 경우가 많다는 점을
-          기억하세요. 정확한 대상·기준은 업종과 지역에 따라 다르니, 관할 구청·보건소에 꼭
-          확인하세요.
+          항목입니다. 위생교육·보건증·소방 시설은 &lsquo;나중에 챙기는 일&rsquo;이 아닙니다.{' '}
+          <span className="font-semibold">영업신고의 선행 조건(전제)</span>인 경우가 많습니다.
+          정확한 대상·기준은 업종과 지역에 따라 다르니, 관할 구청·보건소에 꼭 확인하세요.
         </p>
         <SourceBackedTable
           caption="음식점 인허가 체크 매트릭스"
@@ -208,8 +208,8 @@ export function Chapter3() {
         <h3 className="text-base font-semibold text-ink">장소와 허가가 정해졌다면, 이제 &lsquo;돈&rsquo;입니다</h3>
         <p className="text-sm text-ink">
           입지·임대차·인허가까지 그림이 그려졌다면, 다음은 실제로 얼마가 드는지입니다. 다음
-          장에서는 가맹비·인테리어·권리금·초도물품까지 초기비용 전체를 한눈에 정리하고, 최악의
-          경우 잃는 돈까지 계산합니다.
+          장에서는 가맹비·인테리어·권리금·초도물품까지 초기비용 전체를 한눈에 정리합니다. 나아가
+          최악의 경우 잃는 돈까지 함께 계산합니다.
         </p>
         <CtaLink href="#learn/ch4-startup-cost">창업에 드는 돈 — 초기비용 전체 지도 보러 가기</CtaLink>
       </section>

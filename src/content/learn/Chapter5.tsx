@@ -18,9 +18,9 @@ export function Chapter5() {
       <header className="space-y-2">
         <h2 className="text-xl font-semibold text-ink">매달 나가는 돈 + 돈의 흐름</h2>
         <p className="text-muted">
-          가게의 생사를 가르는 건 시작 비용이 아니라, 매달 반복되는 돈의 흐름입니다. 매출이
-          통장에 찍혀도 그게 내 돈이 아닙니다. 원가·인건비·임대료·수수료·세금·대출이 차례로
-          빠져나가고 나서야 &lsquo;손에 남는 돈&rsquo;이 보입니다. 이 장은 그 흐름을 한 줄씩
+          가게의 생사를 가르는 건 시작 비용이 아니라 매달 반복되는 돈의 흐름입니다. 매출이
+          통장에 찍혀도 그게 다 내 돈은 아닙니다. 원가·인건비·임대료·수수료·세금·대출이 차례로
+          빠져나간 뒤에야 &lsquo;손에 남는 돈&rsquo;이 보입니다. 이 장은 그 흐름을 한 줄씩
           따라갑니다.
         </p>
       </header>
@@ -77,9 +77,8 @@ export function Chapter5() {
       <section className="space-y-3">
         <h3 className="text-lg font-semibold text-ink">2. 월 손익 워터폴 — 매출이 손에 남는 돈이 되기까지</h3>
         <p className="text-sm text-ink">
-          월매출에서 비용이 차례로 빠져나가는 과정을 그림으로 보면, &lsquo;매출 = 내 돈&rsquo;이
-          아니라는 사실이 분명해집니다. 아래는{' '}
-          <span className="font-semibold">월매출 3,000만 원을 가정한 예시</span>이며, 실제 비율은
+          월매출에서 비용이 차례로 빠져나가는 과정을 그림으로 보면 &lsquo;매출 = 내 돈&rsquo;이
+          아니라는 사실이 분명해집니다. 아래 단계별 금액은 모두 예시 가정이며, 실제 비율은
           업종·입지에 따라 크게 다릅니다.
         </p>
         <CashflowWaterfall
@@ -97,7 +96,7 @@ export function Chapter5() {
           ]}
         />
         <p className="text-sm text-ink">
-          3,000만 원을 팔아도 손에 남는 건 예시로 300만 원 안팎입니다.{' '}
+          많이 팔아도 손에 남는 건 한 줌입니다.{' '}
           <span className="font-semibold">여기서 사장님 본인의 생활비까지 나와야 한다</span>는
           점을 잊지 마세요. 그래서 매출 규모보다 &lsquo;비용 구조&rsquo;가 더 중요합니다.
         </p>
@@ -110,10 +109,10 @@ export function Chapter5() {
       <section className="space-y-3">
         <h3 className="text-lg font-semibold text-ink">3. 현금 유출 캘린더 — 언제 돈이 빠지는가</h3>
         <p className="text-sm text-ink">
-          비용은 금액뿐 아니라 <span className="font-semibold">타이밍</span>이 중요합니다. 특히
-          세금·보험은 매달이 아니라 특정 달에 목돈으로 빠지기 때문에, 미리 알고 떼어 두지 않으면
-          그달에 현금이 막힙니다. 아래 시기는 일반적인 안내이며, 과세 유형(간이/일반)과 직원
-          유무에 따라 달라집니다.
+          비용은 금액만큼 <span className="font-semibold">타이밍</span>도 중요합니다. 세금·보험은
+          매달이 아니라 특정 달에 목돈으로 빠집니다. 미리 알고 떼어 두지 않으면 그달에 현금이
+          막힙니다. 아래 시기는 일반적인 안내이며, 과세 유형(간이/일반)과 직원 유무에 따라
+          달라집니다.
         </p>
         <CashflowCalendar
           sourceId={VAT_ID}
@@ -141,7 +140,7 @@ export function Chapter5() {
             term="종합소득세"
             explanation="1년 동안의 사업소득 등을 합산해 다음 해 5월에 신고·납부하는 세금. 이익이 클수록 세 부담도 커집니다."
           />{' '}
-          정산월(5월)입니다. 이 달들에 목돈이 나간다는 걸 모르면, 평소엔 잘 굴러가던 가게가
+          정산월(5월)입니다. 이 달들에 목돈이 나간다는 걸 모르면, 평소 잘 굴러가던 가게도
           납부월에 갑자기 휘청입니다.
         </p>
         <div className="grid gap-3 sm:grid-cols-2">
@@ -167,9 +166,9 @@ export function Chapter5() {
       <section className="space-y-3">
         <h3 className="text-lg font-semibold text-ink">4. 매출 시나리오 3종</h3>
         <p className="text-sm text-ink">
-          같은 가게라도 매출이 얼마냐에 따라 손에 남는 돈은 크게 달라집니다. 아래 세 가지는
-          모두 <span className="font-semibold">예시 가정</span>으로, 고정비는 비슷하게 두고
-          매출만 바꿨을 때 손익이 어떻게 변하는지 감을 잡기 위한 것입니다.
+          같은 가게라도 매출에 따라 손에 남는 돈은 크게 달라집니다. 아래 세 가지는 모두{' '}
+          <span className="font-semibold">예시 가정</span>입니다. 고정비는 비슷하게 두고 매출만
+          바꿨을 때 손익이 어떻게 변하는지 감을 잡기 위한 것입니다.
         </p>
         <div className="space-y-3">
           <MoneyScenario
@@ -216,8 +215,8 @@ export function Chapter5() {
           />
         </div>
         <p className="text-sm text-ink">
-          매출이 2배가 돼도 손에 남는 돈이 2배가 되지는 않습니다. 매출이 오르면 원가·수수료·세금도
-          같이 오르기 때문입니다. 그래서{' '}
+          매출이 곱절로 올라도 손에 남는 돈이 곱절이 되지는 않습니다. 매출이 오르면
+          원가·수수료·세금도 같이 오르기 때문입니다. 그래서{' '}
           <TermExplainer
             term="손익분기점"
             explanation="총비용과 매출이 같아져 손익이 0이 되는 매출 수준. 이 점을 넘겨야 비로소 이익이 납니다. 구체적인 계산은 다음 장에서 다룹니다."
