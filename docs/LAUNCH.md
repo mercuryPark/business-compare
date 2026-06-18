@@ -9,6 +9,11 @@
 ## Before sharing publicly (do these)
 - [ ] `npm test` 그린, `npm run build` 성공.
 - [ ] `npm run generate:og` 후 `public/og-changup-nachimbang.png`(1200×630) 존재 확인.
+- [ ] **배포 경로/도메인 확정 후 OG·favicon 경로 점검** — `index.html`의 `og:image`/`favicon`은
+      루트 절대경로(`/...`)다. 도메인 루트(`example.com/`) 배포면 그대로 OK. **서브패스
+      배포(예: GitHub Pages `사용자.github.io/business-compare/`)라면** ① Vite `base`를
+      `/business-compare/`로 설정하고 ② `og:image`/`twitter:image`를 **완전한 `https://` 절대
+      URL**로 바꿔야 한다(카카오·네이버 등 크롤러는 경로형 og:image를 못 가져오는 경우가 많음).
 - [ ] 배포본을 카카오톡/네이버 카페에 링크해 OG 미리보기(제목·설명·이미지) 정상 노출 확인.
 - [ ] 모바일에서 홈→챕터 읽기 흐름·목차 드로어 동작 확인.
 
